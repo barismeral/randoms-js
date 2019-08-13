@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/barismeral/randoms-js.svg?branch=master)](https://travis-ci.org/barismeral/randoms-js)
+
 # Randoms.js
 
 Javascript random objects generator
