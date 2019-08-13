@@ -1,5 +1,5 @@
 
-const Random = require("../index");
+const Random = require("../src/index");
 var assert = require('assert');
 
 

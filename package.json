@@ -2,9 +2,10 @@
   "name": "randoms-js",
   "version": "1.0.0",
   "description": "Javascript random objects generator",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": "babel src -d lib"
   },
   "keywords": [
     "random",
@@ -24,8 +25,9 @@
     "url": "https://github.com/barismeral/randoms-js/issues"
   },
   "homepage": "https://github.com/barismeral/randoms-js",
-  
   "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
     "mocha": "^6.2.0"
   }
 }
