@@ -24,6 +24,7 @@
     "url": "https://github.com/barismeral/randoms-js/issues"
   },
   "homepage": "https://github.com/barismeral/randoms-js",
+  
   "devDependencies": {
     "mocha": "^6.2.0"
   }
