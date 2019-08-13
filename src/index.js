@@ -14,10 +14,10 @@
  * @return {number} random number
  * @example nextInt(2,50)
  */
-const nextInt = (min = 0, max = 1) =>{
+const nextInt = (min = 0, max = 1) => {
 
-    Errors.NumberTypeError(min,max);
-    Errors.NumberRangeError(min,max);
+    Errors.NumberTypeError(min, max);
+    Errors.NumberRangeError(min, max);
 
     return Math.floor(Math.random() * (max - min) + min);
 }
@@ -29,10 +29,10 @@ const nextInt = (min = 0, max = 1) =>{
  * @return {number} random number
  * @example nextDouble(2.4,50.7)
  */
-const nextDouble = (min = 0, max = 1)=> {
+const nextDouble = (min = 0, max = 1) => {
 
-    Errors.NumberTypeError(min,max);
-    Errors.NumberRangeError(min,max);
+    Errors.NumberTypeError(min, max);
+    Errors.NumberRangeError(min, max);
 
     return Math.random() * (max - min) + min;
 
@@ -44,7 +44,7 @@ const nextDouble = (min = 0, max = 1)=> {
  * 
  */
 const nextBoolean = () => {
-    
+
     return (Math.floor(Math.random() * 2) == 0) ? false : true;
 }
 
@@ -72,17 +72,17 @@ const nextChar = (lowerCase = false) => {
  * @example nextDimension(960,640) 
  * @example nextDimension(960,640,0,5) 
  */
-const nextDimension=(width,height,minWidth=0,minHeight=0)=>{
+const nextDimension = (width, height, minWidth = 0, minHeight = 0) => {
 
-    Errors.NumberTypeError(minWidth,minHeight,width,height);
-    Errors.NumberRangeError(minWidth,width);
-    Errors.NumberRangeError(minHeight,height);
+    Errors.NumberTypeError(minWidth, minHeight, width, height);
+    Errors.NumberRangeError(minWidth, width);
+    Errors.NumberRangeError(minHeight, height);
 
 
-   return {
-    width:nextInt(minWidth,width),
-    height:nextInt(minHeight,height)
-   } 
+    return {
+        width: nextInt(minWidth, width),
+        height: nextInt(minHeight, height)
+    }
 
 }
 
@@ -96,15 +96,15 @@ const nextDimension=(width,height,minWidth=0,minHeight=0)=>{
  * @example nextPoint(400,100)
  * @example nextDimension(400,100,0,0) 
  */
-const nextPoint=(x,y,minX=0,minY=0)=>{
+const nextPoint = (x, y, minX = 0, minY = 0) => {
 
-    Errors.NumberTypeError(x,y,minX,minY);
-    Errors.NumberRangeError(minX,x);
-    Errors.NumberRangeError(minY,y);
+    Errors.NumberTypeError(x, y, minX, minY);
+    Errors.NumberRangeError(minX, x);
+    Errors.NumberRangeError(minY, y);
 
     return {
-        x:nextInt(minX,x),
-        y:nextInt(minY,y)
+        x: nextInt(minX, x),
+        y: nextInt(minY, y)
     }
 
 }
@@ -121,11 +121,11 @@ const nextPoint=(x,y,minX=0,minY=0)=>{
  */
 const nextString = (len = 2, lowerCase = false, studlyCaps = false) => {
 
-    Errors.BooleanTypeError(lowerCase,studlyCaps);
+    Errors.BooleanTypeError(lowerCase, studlyCaps);
     Errors.NumberTypeError(len);
 
     if (len < 2)
-     return nextChar(lowerCase);
+        return nextChar(lowerCase);
 
     let str = '';
 
@@ -155,18 +155,18 @@ const nextString = (len = 2, lowerCase = false, studlyCaps = false) => {
  * @return {Date} date object
  * @example nextDate(1995,2019)
  */
-const nextDate=(minYear,maxYear)=>{
+const nextDate = (minYear, maxYear) => {
 
     Errors.NumberTypeError(maxYear);
-    Errors.NumberRangeError(minYear,maxYear);
+    Errors.NumberRangeError(minYear, maxYear);
 
-    let date = new Date(nextInt(minYear,maxYear),
-                        nextInt(1,13),
-                        nextInt(1,32),
-                        nextInt(1,13),
-                        nextInt(1,60),
-                        nextInt(1,120),
-                        13);
+    let date = new Date(nextInt(minYear, maxYear),
+        nextInt(1, 13),
+        nextInt(1, 32),
+        nextInt(1, 13),
+        nextInt(1, 60),
+        nextInt(1, 120),
+        13);
 
     return date;
 
@@ -177,13 +177,13 @@ const nextDate=(minYear,maxYear)=>{
  * Generate random RGB color
  * @return {object} color object
  */
-const nextColorRgb=()=>{
+const nextColorRgb = () => {
 
-return {
-    r:nextInt(0,256),
-    g:nextInt(0,256),
-    b:nextInt(0,256)
-}
+    return {
+        r: nextInt(0, 256),
+        g: nextInt(0, 256),
+        b: nextInt(0, 256)
+    }
 
 }
 
@@ -191,16 +191,16 @@ return {
  * Generate random RGBA color
  * @return {object} color object
  */
-const nextColorRgba=()=>{
+const nextColorRgba = () => {
 
     return {
-        r:nextInt(0,256),
-        g:nextInt(0,256),
-        b:nextInt(0,256),
-        a:parseFloat((nextDouble(0,1).toFixed(1)))
+        r: nextInt(0, 256),
+        g: nextInt(0, 256),
+        b: nextInt(0, 256),
+        a: parseFloat((nextDouble(0, 1).toFixed(1)))
     }
-    
-  }
+
+}
 
 
 /**
@@ -214,11 +214,11 @@ const nextColorRgba=()=>{
  */
 const nextIntArray = (min = 0, max = 1, len = 2) => {
 
-    Errors.NumberTypeError(min,max,len);
-    Errors.NumberRangeError(min,max);
+    Errors.NumberTypeError(min, max, len);
+    Errors.NumberRangeError(min, max);
 
     if (len < 2)
-     return nextInt(min,max);
+        return nextInt(min, max);
 
     let array = [];
 
@@ -240,13 +240,13 @@ const nextIntArray = (min = 0, max = 1, len = 2) => {
  * @return {Array} random double array
  * @example nextDoubleArray(2.0,40.5,10)
  */
-const nextDoubleArray = (min = 0.0, max=1.0, len = 2) => {
+const nextDoubleArray = (min = 0.0, max = 1.0, len = 2) => {
 
-    Errors.NumberTypeError(min,max,len);
-    Errors.NumberRangeError(min,max);
+    Errors.NumberTypeError(min, max, len);
+    Errors.NumberRangeError(min, max);
 
     if (len < 2)
-     return nextDouble(min,max);
+        return nextDouble(min, max);
 
     let array = [];
 
@@ -274,8 +274,8 @@ const nextCharArray = (len = 2, lowerCase = false) => {
     Errors.BooleanTypeError(lowerCase);
 
     if (len < 2)
-     return nextChar(lowerCase);
-    
+        return nextChar(lowerCase);
+
     let array = [];
 
     for (let i = 0; i < len; i++) {
@@ -295,7 +295,7 @@ const nextCharArray = (len = 2, lowerCase = false) => {
  * @example nextBooleanArray(5)
  */
 const nextBooleanArray = (len = 2) => {
-    
+
     Errors.NumberTypeError(len);
 
     if (len < 2)
@@ -322,14 +322,14 @@ const nextBooleanArray = (len = 2) => {
  */
 const nextIntUniqueArray = (min = 0, max = 1, len = 2) => {
 
-    Errors.NumberTypeError(min,max,len);
-    Errors.NumberRangeError(min,max);
+    Errors.NumberTypeError(min, max, len);
+    Errors.NumberRangeError(min, max);
 
     if (len < 2)
         return nextInt(min, max);
-    
-    Errors.ArrayBoundError(max,min,len);    
-    
+
+    Errors.ArrayBoundError(max, min, len);
+
     let array = [];
 
     array.push(nextInt(min, max));
@@ -341,8 +341,8 @@ const nextIntUniqueArray = (min = 0, max = 1, len = 2) => {
 
         rnd = nextInt(min, max);
 
-        while (array.includes(rnd)==true) {
-        
+        while (array.includes(rnd) == true) {
+
             rnd = nextInt(min, max);
 
         }
@@ -362,14 +362,14 @@ const nextIntUniqueArray = (min = 0, max = 1, len = 2) => {
  * @return {any} random any element
  * @example inArrayElement(["html","css","javascript"])
  */
-const inArrayElement = (array=[]) =>{
+const inArrayElement = (array = []) => {
 
     Errors.ArrayTypeError(array);
 
-    if(array.length<2)
-    return array[0];
+    if (array.length < 2)
+        return array[0];
 
-    return array[nextInt(0,array.length)];
+    return array[nextInt(0, array.length)];
 
 }
 
@@ -379,55 +379,55 @@ const inArrayElement = (array=[]) =>{
  * @return {string} - charecter
  * @example inStringChar("Barış")
  */
-const inStringChar =(str)=>{
+const inStringChar = (str) => {
 
     Errors.StringTypeError(str);
 
-    return str.charAt(nextInt(0,str.length));
+    return str.charAt(nextInt(0, str.length));
 
 }
 
 /**
  * Errors objects
  */
-const Errors={
+const Errors = {
 
-    NumberTypeError:(...numbers)=>{
-        numbers.forEach(item=>{
-            if(typeof(item)!="number")
-            throw new TypeError("Parameter is not number");
-
-        });
-        
-    },
-    StringTypeError:(...strings)=>{
-        strings.forEach(item=>{
-            if(typeof(item)!="string")
-            throw new TypeError("Parameter is not string");
+    NumberTypeError: (...numbers) => {
+        numbers.forEach(item => {
+            if (typeof (item) != "number")
+                throw new TypeError("Parameter is not number");
 
         });
+
     },
-    BooleanTypeError:(...booleans)=>{
+    StringTypeError: (...strings) => {
+        strings.forEach(item => {
+            if (typeof (item) != "string")
+                throw new TypeError("Parameter is not string");
+
+        });
+    },
+    BooleanTypeError: (...booleans) => {
         booleans.forEach(item => {
-            if(typeof(item)!="boolean")
-            throw new TypeError("Parameter is not boolean");
+            if (typeof (item) != "boolean")
+                throw new TypeError("Parameter is not boolean");
         });
     },
-    ArrayTypeError:(...arrays)=>{
+    ArrayTypeError: (...arrays) => {
         arrays.forEach(item => {
-            if(!Array.isArray(item))
-            throw new TypeError("Parameter is not array");
+            if (!Array.isArray(item))
+                throw new TypeError("Parameter is not array");
         });
     },
-    NumberRangeError:(min,max)=>{
-        if(min>max)
-        throw new RangeError("minimum number cannot be greater than maximum number");
-        if(min==max)
-        throw new RangeError("minimum number cannot be equals maximum number");  
+    NumberRangeError: (min, max) => {
+        if (min > max)
+            throw new RangeError("minimum number cannot be greater than maximum number");
+        if (min == max)
+            throw new RangeError("minimum number cannot be equals maximum number");
     },
-    ArrayBoundError:(max,min,len)=>{
-        if(max-min<len)
-        throw new Error("The total number of numbers to be generated must be greater than or equal to the length of the array.");     
+    ArrayBoundError: (max, min, len) => {
+        if (max - min < len)
+            throw new Error("The total number of numbers to be generated must be greater than or equal to the length of the array.");
     }
 
 
@@ -437,26 +437,26 @@ const Errors={
  * 
  * @const {object}
  */
-const Random={
-  
-    nextInt:nextInt,
-    nextDouble:nextDouble,
-    nextBoolean:nextBoolean,
-    nextChar:nextChar,
-    nextString:nextString,
-    nextDate:nextDate,
-    nextIntArray:nextIntArray,
-    nextDoubleArray:nextDoubleArray,
-    nextCharArray:nextCharArray,
-    nextBooleanArray:nextBooleanArray,
-    nextIntUniqueArray:nextIntUniqueArray,
-    nextDimension:nextDimension,
-    nextPoint:nextPoint,
-    nextColorRgb:nextColorRgb,
-    nextColorRgba:nextColorRgba,
-    inArrayElement:inArrayElement,
-    inStringChar:inStringChar
+const Random = {
+
+    nextInt: nextInt,
+    nextDouble: nextDouble,
+    nextBoolean: nextBoolean,
+    nextChar: nextChar,
+    nextString: nextString,
+    nextDate: nextDate,
+    nextIntArray: nextIntArray,
+    nextDoubleArray: nextDoubleArray,
+    nextCharArray: nextCharArray,
+    nextBooleanArray: nextBooleanArray,
+    nextIntUniqueArray: nextIntUniqueArray,
+    nextDimension: nextDimension,
+    nextPoint: nextPoint,
+    nextColorRgb: nextColorRgb,
+    nextColorRgba: nextColorRgba,
+    inArrayElement: inArrayElement,
+    inStringChar: inStringChar
 }
-    
+
 
 module.exports = Random;

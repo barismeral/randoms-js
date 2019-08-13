@@ -3,11 +3,11 @@ const Random = require("../src/index");
 var assert = require('assert');
 
 
-describe('random', () =>{
-    describe('nextInt function', () =>{
-        it('generate random int',  () =>{
-            var result = Random.nextInt(1,2);
-            assert.equal(result,1);
+describe('random', () => {
+    describe('nextInt function', () => {
+        it('generate random int', () => {
+            var result = Random.nextInt(1, 2);
+            assert.equal(result, 1);
         });
     });
 });
