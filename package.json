@@ -1,0 +1,29 @@
+{
+  "name": "randoms-js",
+  "version": "1.0.0",
+  "description": "Javascript random objects generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "random",
+    "javascript",
+    "node",
+    "random string",
+    "random date",
+    "random color"  
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/barismeral/randoms-js.git"
+  },
+
+  "author": "Barış Meral",
+  "license": "ISC",
+
+  "bugs": {
+    "url": "https://github.com/barismeral/randoms-js/issues"
+  },
+  "homepage": "https://github.com/barismeral/randoms-js"
+}
