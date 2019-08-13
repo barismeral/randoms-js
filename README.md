@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/barismeral/randoms-js.svg?branch=master)](https://travis-ci.org/barismeral/randoms-js)
+[![GitHub issues](https://img.shields.io/github/issues/barismeral/randoms-js)](https://github.com/barismeral/randoms-js/issues)
 
 # Randoms.js
 
