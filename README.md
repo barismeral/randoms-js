@@ -1,10 +1,14 @@
-[![Build Status](https://travis-ci.org/barismeral/randoms-js.svg?branch=master)](https://travis-ci.org/barismeral/randoms-js)
+[![Build Status](https://travis-ci.org/barismeral/randoms-js.svg?branch=master)](https://travis-ci.org/barismeral/randoms-js)&nbsp;&nbsp;&nbsp;
 [![GitHub issues](https://img.shields.io/github/issues/barismeral/randoms-js)](https://github.com/barismeral/randoms-js/issues)
-![GitHub top language](https://img.shields.io/github/languages/top/barismeral/randoms-js)
+<br>
+<br>
+![GitHub top language](https://img.shields.io/github/languages/top/barismeral/randoms-js)&nbsp;&nbsp;&nbsp;
+![GitHub repo size](https://img.shields.io/github/repo-size/barismeral/randoms-js)&nbsp;&nbsp;&nbsp;
+![GitHub](https://img.shields.io/github/license/barismeral/randoms-js)&nbsp;&nbsp;&nbsp;
+![npm](https://img.shields.io/npm/v/randoms-js)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ![npm bundle size](https://img.shields.io/bundlephobia/min/randoms-js)
-![GitHub repo size](https://img.shields.io/github/repo-size/barismeral/randoms-js)
-![npm](https://img.shields.io/npm/v/randoms-js)
-![GitHub](https://img.shields.io/github/license/barismeral/randoms-js)
+<br>
+<br>
 ![GitHub followers](https://img.shields.io/github/followers/barismeral?style=social)
 
 
