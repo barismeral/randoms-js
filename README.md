@@ -7,6 +7,7 @@
 ![GitHub](https://img.shields.io/github/license/barismeral/randoms-js)&nbsp;&nbsp;&nbsp;
 ![npm](https://img.shields.io/npm/v/randoms-js)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ![npm bundle size](https://img.shields.io/bundlephobia/min/randoms-js)
+![npm](https://img.shields.io/npm/dt/randoms-js)
 <br>
 <br>
 ![GitHub followers](https://img.shields.io/github/followers/barismeral?style=social)
